@@ -1,0 +1,7 @@
+authen_user:
+    resource: "@authenBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+authen_homepage:
+    path:     /
+    defaults: { _controller: authenBundle:Default:index }

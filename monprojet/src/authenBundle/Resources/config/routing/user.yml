@@ -1,0 +1,12 @@
+user_index:
+    path:     /
+    defaults: { _controller: "authenBundle:User:index" }
+    methods:  GET
+
+user_show:
+    path:     /{login}/show
+    defaults: { _controller: "authenBundle:User:show" }
+    methods:  GET
+
+
+

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Clients list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Login</th>
+                <th>Password</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Cartefid</th>
+                <th>Tel</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for client in clients %}
+            <tr>
+                <td><a href="{{ path('clientmg_show', { 'login': client.login }) }}">{{ client.login }}</a></td>
+                <td>{{ client.password }}</td>
+                <td>{{ client.nom }}</td>
+                <td>{{ client.prenom }}</td>
+                <td>{{ client.email }}</td>
+                <td>{{ client.carteFid }}</td>
+                <td>{{ client.tel }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('clientmg_show', { 'login': client.login }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('clientmg_edit', { 'login': client.login }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('clientmg_new') }}">Create a new client</a>
+        </li>
+    </ul>
+{% endblock %}

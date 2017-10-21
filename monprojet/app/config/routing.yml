@@ -1,0 +1,53 @@
+authen_client:
+    resource: "@authenBundle/Controller/clientController.php"
+    type:     annotation
+
+authen_client:
+    resource: "@authenBundle/Controller/clientController.php"
+    type:     annotation
+
+authen_client:
+    resource: "@authenBundle/Controller/clientController.php"
+    type:     annotation
+
+authen_client:
+    resource: "@authenBundle/Controller/clientController.php"
+    type:     annotation
+
+app_client:
+    resource: "@AppBundle/Controller/clientController.php"
+    type:     annotation
+
+authen_mg_user:
+    resource: "@authenBundle/Controller/MgUserController.php"
+    type:     annotation
+
+app_userr:
+    resource: "@AppBundle/Controller/UserrController.php"
+    type:     annotation
+
+app_user:
+    resource: "@AppBundle/Controller/UserController.php"
+    type:     annotation
+
+authen_user:
+    resource: "@authenBundle/Controller/UserController.php"
+    type:     annotation
+    
+
+authen_client:
+    resource: "@authenBundle/Controller/clientController.php"
+    type:     annotation
+
+authen:
+    resource: "@authenBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+
+
+
